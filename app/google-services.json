@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "614647848330",
+    "project_id": "pmumilinko",
+    "storage_bucket": "pmumilinko.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614647848330:android:488f5fcd8f89e32ba6bc73",
+        "android_client_info": {
+          "package_name": "hr.milinko.firebasemilinko"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9dRLssP96Dm81N_ROYblpldBpV7YULf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
