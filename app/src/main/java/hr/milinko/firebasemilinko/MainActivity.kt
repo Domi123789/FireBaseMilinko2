@@ -3,6 +3,8 @@ package hr.milinko.firebasemilinko
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.InputBinding
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -27,9 +29,17 @@ class MainActivity : AppCompatActivity() {
                 {
                     val a: List<Tekst> = snapshot.children.map{datasnapshot->datasnapshot.getValue(Tekst:: class.java)!!}
                     text.addAll(a)
-                }
+
+                    binding.Lista.apply{
+                        layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+                        adapter = TextAdapter(text,this@MainActivity)
+                        {position->
+                            Toast.makeText(this@MainActivity,"pozicija je $position", Toast.LENGTH_LONG).show()
+                        }
+                }}
                 catch(_:Exception)
                 {
+
                 }
             }
 
